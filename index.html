@@ -288,7 +288,7 @@
     <div class="column is-full-width">
       <centering>
         <div style="text-align: center;">
-            <embed src="assets/TaskDefine_new.pdf" type="application/pdf" width="80%" height="600px" />
+            <iframe src="assets/TaskDefine_new.pdf" width="80%" height="600px" style="border: none;"></iframe>
         </div>
       </centering>    
       <br>
@@ -302,27 +302,26 @@
         </p>
         <p style="font-family:Times New Roman; text-align: left;">
             To better address the limitations of existing image fraud detection datasets in the financial sector, we introduce a new benchmark named <strong>CrossCred</strong>. This dataset is constructed entirely from <strong>real-world</strong> data collected in complex financial fraud scenarios, where document images are carefully forged to evade current detection technologies. <strong>CrossCred</strong> includes detailed human annotations, covering both tampered regions and corresponding explanations.
-            Unlike previous datasets that provide only a single sample per case, <strong>CrossCred</strong> supports <em>cross-sample inference</em>: each fraudulent case is linked to a small group of semantically similar images, enabling the evaluation of reasoning-based detection methods. Specifically, from a collection of 400K business images, we mined 109 cross-sample anomaly cases (396 total samples, averaging 3.63 samples per case) and 109 randomly selected anomaly-free images. In total, the benchmark consists of 505 images spanning 61 distinct document types.        
+            Unlike previous datasets that provide only a single sample per case, <strong>CrossCred</strong> supports <em>cross-sample inference</em>: each fraudulent case is linked to a small group of semantically similar images, enabling the evaluation of reasoning-based detection methods. Specifically, from a collection of <code>400K</code> business images, we mined <code>109</code> cross-sample anomaly cases (<code>396</code> total samples, averaging 3.63 samples per case) and 109 randomly selected anomaly-free images. In total, the benchmark consists of <code>505</code> images spanning <code>61</code> distinct document types.        
         </p>
         <div style="text-align: center;">
-            <embed src="assets/AnnotationCase.pdf" type="application/pdf" width="80%" height="600px" />
-            <p style="font-style: italic; font-size: 14px; color: #555; margin-top: 8px;">
-              Figure: Examples of the Human Annotation Process.
-              Given the LLM's pre-annotated conclusions, human annotators need to determine whether anomalies exist in the actual images and whether the LLM's pre-annotated conclusions align with the ground truth. They then select one of five predefined labels (TP, FP-A, FN, FP-N, TN) to evaluate the LLM's pre-annotated results. If the selected label is FP-A or FN (marked with *), it indicates that the LLM failed to identify the correct anomalous elements, and annotators are required to correct or supplement the anomalous elements along with the associated images. Figures (a), (b), and (c) demonstrate examples of LLM pre-annotated results as TP, FP-A, and FP-N, respectively.
-            </p>
+            <iframe src="assets/AnnotationCase.pdf" width="80%" height="600px" style="border: none;"></iframe>
         </div> 
+        <p style="font-family:Times New Roman; text-align: left;">
+            <strong>Examples of the Human Annotation Process.</strong> Given the LLM's pre-annotated conclusions, human annotators need to determine whether anomalies exist in the actual images and whether the LLM's pre-annotated conclusions align with the ground truth. They then select one of five predefined labels (TP, FP-A, FN, FP-N, TN) to evaluate the LLM's pre-annotated results. If the selected label is FP-A or FN (marked with *), it indicates that the LLM failed to identify the correct anomalous elements, and annotators are required to correct or supplement the anomalous elements along with the associated images. Figures (a), (b), and (c) demonstrate examples of LLM pre-annotated results as TP, FP-A, and FP-N, respectively.
+        </p>
 
         <div style="text-align: center;">
-            <embed src="assets/Main.pdf" type="application/pdf" width="80%" height="600px" />
+            <iframe src="assets/Main.pdf" width="80%" height="600px" style="border: none;"></iframe>
         </div> 
         <p style="font-family:Times New Roman; text-align: left;">
             <strong>Framework for CSIAD.</strong> The diagram outlines the key modules: <em>(a) Retrieval Ensemble</em>, <em>(b) Sample-Specific Rule Generation</em>, <em>(c) Fact-Driven Verification</em>, and <em>(d) Rule-Based Anomaly Analysis</em>.
             To determine whether a document image is fraudulent, a natural workflow is to "consult" relevant images to identify potential anomalies. As illustrated in the framework for <strong>CSIAD</strong>, which consists of four core modules:
             <ul style="margin-top: 0;">
-                <li><strong>Retrieval Ensemble:</strong> Given a query image <code>I<sub>q</sub></code>, this module retrieves a batch of relevant images, forming a suspicious set <code>S<sub>q</sub></code>.</li>
-                <li><strong>Sample-Specific Rule Generation:</strong> Generates a set of rules <code>R<sub>init</sub></code> that normal samples are expected to follow.</li>
-                <li><strong>Fact-Driven Verification:</strong> Validates and filters the rules using factual evidence to yield a refined set <code>R<sub>verified</sub></code>.</li>
-                <li><strong>Rule-Based Anomaly Detection:</strong> Uses the verified rules to detect and explain anomalies in <code>S<sub>q</sub></code>.</li>
+                <li><strong>(a) Retrieval Ensemble:</strong> Given a query image <code>I<sub>q</sub></code>, this module retrieves a batch of relevant images, forming a suspicious set <code>S<sub>q</sub></code>.</li>
+                <li><strong>(b) Sample-Specific Rule Generation:</strong> Generates a set of rules <code>R<sub>init</sub></code> that normal samples are expected to follow.</li>
+                <li><strong>(c) Fact-Driven Verification:</strong> Validates and filters the rules using factual evidence to yield a refined set <code>R<sub>verified</sub></code>.</li>
+                <li><strong>(d) Rule-Based Anomaly Detection:</strong> Uses the verified rules to detect and explain anomalies in <code>S<sub>q</sub></code>.</li>
             </ul>
         </p>
       </div>       
@@ -334,23 +333,22 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-        <h2 class="title is-3">Examples of VEGA <img id="painting_icon2" width="3%" src="assets/lyra.png"> Dataset</h2>
-        <p>All papers in VEGA are from arxiv.</p>
+        <h2 class="title is-3">Complete Workflow of CSIAD Analysis.</h2>
       </div>
     </div>
     <div class="image-slider slider-1">
       <div class="slides">
         <div class="slide">
-          <img src="assets/IITC_case1.jpg" alt="IITC Case 1">
-          <div class="caption">IITC Case 1</div>
+            <iframe src="assets/CaseStudy_workflow.pdf" width="80%" height="600px" style="border: none;"></iframe>
+            <div class="caption">Complete Workflow of CSIAD Analysis (1/3).</div>
         </div>
         <div class="slide">
-          <img src="assets/IITC_case2.jpg" alt="IITC Case 2">
-          <div class="caption">IITC Case 2</div>
+            <iframe src="assets/CaseStudy_workflow_2.pdf" width="80%" height="600px" style="border: none;"></iframe>
+            <div class="caption">Complete Workflow of CSIAD Analysis (2/3).</div>
         </div>
         <div class="slide">
-          <img src="assets/ITA_case1.jpg" alt="Image 3">
-          <div class="caption">ITA Case 1</div>
+            <iframe src="assets/CaseStudy_workflow_3.pdf" width="80%" height="600px" style="border: none;"></iframe>
+            <div class="caption">Complete Workflow of CSIAD Analysis (3/3).</div>
         </div>
       </div>
       <div class="navigation">
@@ -361,49 +359,6 @@
   </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-        <h2 class="title is-3">Specific Cases of VEGA <img id="painting_icon2" width="3%" src="assets/lyra.png"> Models </h2>
-        <p>VEGA-8k* is a proprietary model developed using 8k token length VEGA data along with some in-house image-text interleaved data. This in-house data includes a wider range of image-text application scenarios, giving VEGA-8k* a more generalized capability for understanding document. VEGA-Base-4k derived from fine-tuning the Qwen-VL-Chat 7B model using the VEGA dataset with a 4k token length.</p>
-      </div>
-    </div>
-    <div class="image-slider slider-2">
-      <div class="slides">
-        <div class="slide">
-          <img src="assets/VEGA-8k*_case1.png" alt="IITC Case 1">
-          <div class="caption">Operation Manual Comprehension Case 1</div>
-        </div>
-        <div class="slide">
-          <img src="assets/VEGA-8k*_case2.png" alt="IITC Case 2">
-          <div class="caption">Operation Manual Comprehension Case 2</div>
-        </div>
-        <div class="slide">
-          <img src="assets/VEGA-8k*_case3.png" alt="Image 3">
-          <div class="caption">Financial Statement Analysis Case 1</div>
-        </div>
-        <div class="slide">
-          <img src="assets/VEGA-8k*_case4.png" alt="Image 3">
-          <div class="caption">Travel Guide Summary Case 1</div>
-        </div>
-        <div class="slide">
-          <img src="assets/VEGA-8k*_case5.png" alt="Image 3">
-          <div class="caption">IITC Case 1</div>
-        </div>
-        <div class="slide">
-          <img src="assets/VEGA-8k*_case6.png" alt="Image 3">
-          <div class="caption">IITC Case 2</div>
-        </div>
-      </div>
-      <div class="navigation">
-        <button class="prev">❮</button>
-        <button class="next">❯</button>
-      </div>
-    </div>
-  </div>
-</section>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
