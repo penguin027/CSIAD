@@ -258,9 +258,9 @@
                 The financial industry faces a substantial workload in verifying document images. 
                 Existing methods based on visual features struggle to identify fraudulent document images due to the lack of visual clues in the tampered regions. 
                 This paper proposes <strong>CSIAD</strong> (Cross-Sample Image Anomaly Detection), a novel framework that leverages LLMs to identify logical inconsistencies in semantically similar images. 
-                CSIAD accurately detects forged images with subtle tampering and provides human-interpretable explanations for each anomaly. 
+                <strong>CSIAD</strong> accurately detects forged images with subtle tampering and provides human-interpretable explanations for each anomaly. 
                 Furthermore, we introduce <strong>CrossCred</strong>, a new benchmark of real-world fraudulent document images with fine-grained manual annotations. 
-                Experiments demonstrate that <strong>CSIAD</strong> outperforms state-of-the-art image fraud detection methods by <strong>79.6%</strong> (F1) on <strong>CSIAD-Bench</strong>, and exceeds deployed industrial solutions by <strong>21.7%</strong> (F1) on real business data.
+                Experiments demonstrate that <strong>CSIAD</strong> outperforms state-of-the-art image fraud detection methods by <strong>79.6%</strong> (F1) on <strong>CrossCred</strong>, and exceeds deployed industrial solutions by <strong>21.7%</strong> (F1) on real business data.
               </p>
   
           </div>
@@ -288,24 +288,24 @@
     <div class="column is-full-width">
       <centering>
         <div style="text-align: center;">
-            <iframe src="assets/TaskDefine_new.pdf" width="95%" style="border: none;"></iframe>
-        </div>          
+            <embed src="assets/TaskDefine_new.pdf" type="application/pdf" width="80%" height="600px" />
+        </div>
       </centering>    
       <br>
       <div class="content has-text-justified"> 
         <p style="font-family:Times New Roman; text-align: left;">
             Comparison between <strong>TTD</strong> (Tampered Text Detection) and <strong>CSIAD</strong> (Cross-Sample Image Anomaly Detection). The forged image is a mobile payment record.
           <ul type="1">
-            <li><b>Left</b>: <span style="font-family:Times New Roman; text-align: left;">Existing TTD relies on visual features of a single sample, which struggles with subtle tampering traces.</span></li>
-            <li><b>Right</b>: <span style="font-family:Times New Roman; text-align: left;">CSIAD incorporates cross-sample analysis based on textual information, effectively increasing the accuracy and explainability of image fraud detection.</span></li>
+            <li><b>Left</b>: <span style="font-family:Times New Roman; text-align: left;">Existing <strong>TTD</strong> relies on visual features of a single sample, which struggles with subtle tampering traces.</span></li>
+            <li><b>Right</b>: <span style="font-family:Times New Roman; text-align: left;"><strong>CSIAD</strong> incorporates cross-sample analysis based on textual information, effectively increasing the accuracy and explainability of image fraud detection.</span></li>
           </ul>
         </p>
         <p style="font-family:Times New Roman; text-align: left;">
-            To better address the limitations of existing image fraud detection datasets in the financial sector, we introduce a new benchmark named <strong>CrossCred</strong>. This dataset is constructed entirely from <strong>real-world</strong> data collected in complex financial fraud scenarios, where document images are carefully forged to evade current detection technologies. CrossCred includes detailed human annotations, covering both tampered regions and corresponding explanations.
-            Unlike previous datasets that provide only a single sample per case, CrossCred supports <em>cross-sample inference</em>: each fraudulent case is linked to a small group of semantically similar images, enabling the evaluation of reasoning-based detection methods. Specifically, from a collection of 400K business images, we mined 109 cross-sample anomaly cases (396 total samples, averaging 3.63 samples per case) and 109 randomly selected anomaly-free images. In total, the benchmark consists of 505 images spanning 61 distinct document types.        
+            To better address the limitations of existing image fraud detection datasets in the financial sector, we introduce a new benchmark named <strong>CrossCred</strong>. This dataset is constructed entirely from <strong>real-world</strong> data collected in complex financial fraud scenarios, where document images are carefully forged to evade current detection technologies. <strong>CrossCred</strong> includes detailed human annotations, covering both tampered regions and corresponding explanations.
+            Unlike previous datasets that provide only a single sample per case, <strong>CrossCred</strong> supports <em>cross-sample inference</em>: each fraudulent case is linked to a small group of semantically similar images, enabling the evaluation of reasoning-based detection methods. Specifically, from a collection of 400K business images, we mined 109 cross-sample anomaly cases (396 total samples, averaging 3.63 samples per case) and 109 randomly selected anomaly-free images. In total, the benchmark consists of 505 images spanning 61 distinct document types.        
         </p>
         <div style="text-align: center;">
-            <iframe src="assets/AnnotationCase.pdf" width="95%" style="border: none;"></iframe>
+            <embed src="assets/AnnotationCase.pdf" type="application/pdf" width="80%" height="600px" />
             <p style="font-style: italic; font-size: 14px; color: #555; margin-top: 8px;">
               Figure: Examples of the Human Annotation Process.
               Given the LLM's pre-annotated conclusions, human annotators need to determine whether anomalies exist in the actual images and whether the LLM's pre-annotated conclusions align with the ground truth. They then select one of five predefined labels (TP, FP-A, FN, FP-N, TN) to evaluate the LLM's pre-annotated results. If the selected label is FP-A or FN (marked with *), it indicates that the LLM failed to identify the correct anomalous elements, and annotators are required to correct or supplement the anomalous elements along with the associated images. Figures (a), (b), and (c) demonstrate examples of LLM pre-annotated results as TP, FP-A, and FP-N, respectively.
@@ -313,11 +313,11 @@
         </div> 
 
         <div style="text-align: center;">
-            <iframe src="assets/Main.pdf" width="95%" style="border: none;"></iframe>
+            <embed src="assets/Main.pdf" type="application/pdf" width="80%" height="600px" />
         </div> 
         <p style="font-family:Times New Roman; text-align: left;">
             <strong>Framework for CSIAD.</strong> The diagram outlines the key modules: <em>(a) Retrieval Ensemble</em>, <em>(b) Sample-Specific Rule Generation</em>, <em>(c) Fact-Driven Verification</em>, and <em>(d) Rule-Based Anomaly Analysis</em>.
-            To determine whether a document image is fraudulent, a natural workflow is to "consult" relevant images to identify potential anomalies. As illustrated in the framework for CSIAD, <strong>CSIAD</strong> consists of four core modules:
+            To determine whether a document image is fraudulent, a natural workflow is to "consult" relevant images to identify potential anomalies. As illustrated in the framework for <strong>CSIAD</strong>, which consists of four core modules:
             <ul style="margin-top: 0;">
                 <li><strong>Retrieval Ensemble:</strong> Given a query image <code>I<sub>q</sub></code>, this module retrieves a batch of relevant images, forming a suspicious set <code>S<sub>q</sub></code>.</li>
                 <li><strong>Sample-Specific Rule Generation:</strong> Generates a set of rules <code>R<sub>init</sub></code> that normal samples are expected to follow.</li>
