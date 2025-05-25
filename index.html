@@ -6,7 +6,7 @@
   <meta name="description" content="Visual Instruction Tuning">
   <meta name="keywords" content="multimodal chatbot">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VEGA</title>
+  <title>CSIAD</title>
   <style>
     #painting_icon {
       position: relative;
@@ -185,40 +185,37 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h2 class="title is-1 publication-title">VEGA<img id="painting_icon" width="3.5%" src="assets/lyra.png">: Learning Interleaved Image-Text Comprehension in Vision-Language Large Models</h2>
+            <h2 class="title is-1 publication-title">Innovative Image Fraud Detection with Cross-Sample Anomaly Analysis: The Power of LLMs</h2>
             <!-- <h3 class="title is-3 publication-title">Visual Instruction Tuning</h3> -->
             <!-- <h5 class="subtitle is-5 publication-awards">NeurIPS 2023 (Oral)</h5> -->
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a  style="color:#f68946;font-weight:normal;">Chenyu Zhou<sup>*</sup></a>,
+                <a  style="color:#f68946;font-weight:normal;">Qiwen Wang</a>,
               </span>
               <span class="author-block">
-                <a  style="color:#008AD7;font-weight:normal;">Mengdan Zhang<sup>*</sup></a>,
+                <a  style="color:#008AD7;font-weight:normal;">Junqi Yang</a>,
               </span>
               <span class="author-block">
-                <a  style="color:#008AD7;font-weight:normal;">Peixian Chen <sup>*</sup></a>,
+                <a  style="color:#f68946;font-weight:normal;">Zhenghao Lin</a>,
               </span>
               <span class="author-block">
-                <a  style="color:#008AD7;font-weight:normal;">Chaoyou Fu</a>,
+                <a  style="color:#f68946;font-weight:normal;">Chen Lin<sup>*</sup></a>,
               </span>
               <span class="author-block">
-                <a  style="color:#008AD7;font-weight:normal;">Yunhang Shen</a>,
+                <a  style="color:#008AD7;font-weight:normal;">Zhenzhe Ying</a>,
               </span>
               <span class="author-block">
-                <a  style="color:#f68946;font-weight:normal;">Xiawu Zheng &dagger;</a>,
-              </span>
-              <span class="author-block">
-                <a  style="color:#008AD7;font-weight:normal;">Xing Sun</a>,
+                <a  style="color:#008AD7;font-weight:normal;">Weiqiang Wang</a>,
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><b style="color:#f68946; font-weight:normal">&#x25B6 </b> Xiamen University</span>
+              <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Ant Group</span>
             </div>
 
             <div class="is-size-6 publication-authors">
-              <span class="author-block"><sup>*</sup>Equal Contribution</span>
-              <span class="author-block"><sup>&dagger;</sup>Corresponding Author</span>
+              <span class="author-block"><sup>*</sup>Corresponding Author</span>
             </div>
 
             <div class="column has-text-centered">
@@ -233,7 +230,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/zhourax/VEGA" target="_blank"
+                  <a href="https://github.com/penguin027/CSIAD" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -258,16 +255,13 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p style="font-family:Times New Roman">
-              The swift progress of Multi-modal Large Models (MLLMs) has showcased their impressive ability to tackle tasks blending vision and language.
-              Yet, most current models and benchmarks cater to scenarios with a narrow scope of visual and textual contexts.
-              These models often fall short when faced with complex comprehension tasks, which involve navigating through a plethora of irrelevant and potentially misleading information in both text and image forms.
-              To bridge this gap, we introduce a new, more demanding task known as Interleaved Image-Text Comprehension (IITC).
-              This task challenges models to discern and disregard superfluous elements in both images and text to accurately answer questions and to follow intricate instructions to pinpoint the relevant image.
-              In support of this task, we further craft a new VEGA dataset, tailored for the IITC task on scientific content, and devised a subtask, Image-Text Association (ITA), to refine image-text correlation skills.
-              Our evaluation of four leading closed-source models, as well as various open-source models using VEGA, underscores the rigorous nature of IITC. 
-              Even the most advanced models, such as Gemini-1.5-pro and GPT4V, only achieved modest success.
-              By employing a multi-task, multi-scale post-training strategy, we have set a robust baseline for MLLMs on the IITC task, attaining an 85.8% accuracy rate in image association and a 0.508 Rouge score. These results validate the effectiveness of our dataset in improving MLLMs capabilities for nuanced image-text comprehension.
-           </p>
+                The financial industry faces a substantial workload in verifying document images. 
+                Existing methods based on visual features struggle to identify fraudulent document images due to the lack of visual clues in the tampered regions. 
+                This paper proposes <strong>CSIAD</strong> (Cross-Sample Image Anomaly Detection), a novel framework that leverages LLMs to identify logical inconsistencies in semantically similar images. 
+                CSIAD accurately detects forged images with subtle tampering and provides human-interpretable explanations for each anomaly. 
+                Furthermore, we introduce <strong>CrossCred</strong>, a new benchmark of real-world fraudulent document images with fine-grained manual annotations. 
+                Experiments demonstrate that <strong>CSIAD</strong> outperforms state-of-the-art image fraud detection methods by <strong>79.6%</strong> (F1) on <strong>CSIAD-Bench</strong>, and exceeds deployed industrial solutions by <strong>21.7%</strong> (F1) on real business data.
+              </p>
   
           </div>
         </div>
@@ -294,30 +288,43 @@
     <div class="column is-full-width">
       <centering>
         <div style="text-align: center;">
-          <img id="teaser" width="95%" src="assets/intro1.png">     
-        </div>
+            <iframe src="assets/TaskDefine_new.pdf" width="95%" style="border: none;"></iframe>
+        </div>          
       </centering>    
       <br>
       <div class="content has-text-justified"> 
         <p style="font-family:Times New Roman; text-align: left;">
-          Comparison between existing VQA tasks and our IITC task.
+            Comparison between <strong>TTD</strong> (Tampered Text Detection) and <strong>CSIAD</strong> (Cross-Sample Image Anomaly Detection). The forged image is a mobile payment record.
           <ul type="1">
-            <li><b>Left</b>: <span style="font-family:Times New Roman; text-align: left;">The input for existing VQA tasks only incorporates a limited amount of image and text data, which is highly relevant to the question.</span></li>
-            <li><b>Right</b>: <span style="font-family:Times New Roman; text-align: left;">The input for the IITC task contains longer images and text information, which includes redundant and misleading data. The model needs to specify the reference image when providing an answer.
+            <li><b>Left</b>: <span style="font-family:Times New Roman; text-align: left;">Existing TTD relies on visual features of a single sample, which struggles with subtle tampering traces.</span></li>
+            <li><b>Right</b>: <span style="font-family:Times New Roman; text-align: left;">CSIAD incorporates cross-sample analysis based on textual information, effectively increasing the accuracy and explainability of image fraud detection.</span></li>
           </ul>
         </p>
         <p style="font-family:Times New Roman; text-align: left;">
-          To evaluate and enhance model performance on the IITC task, we have created the <strong>VEGA Dataset</strong>, which focuses on the <strong>comprehension of scientific papers</strong> and contains over <strong>50,000</strong> scientific articles. The VEGA dataset is structured into two subsets, each specifically curated to train models on the <strong>IITC and ITA tasks</strong>, respectively. The ITA task is a subtask designed to support the training of the IITC task. We fine-tuned the Qwen-VL-Chat model on the VEGA dataset using a <strong>multi-scale, multi-task</strong> training strategy, resulting in the <strong>VEGA-Base model</strong>. Our experimental results show that this model achieves an image association accuracy rate of <strong>85.8%</strong>, which is a substantial improvement and a strong baseline for the IITC task.
+            To better address the limitations of existing image fraud detection datasets in the financial sector, we introduce a new benchmark named <strong>CrossCred</strong>. This dataset is constructed entirely from <strong>real-world</strong> data collected in complex financial fraud scenarios, where document images are carefully forged to evade current detection technologies. CrossCred includes detailed human annotations, covering both tampered regions and corresponding explanations.
+            Unlike previous datasets that provide only a single sample per case, CrossCred supports <em>cross-sample inference</em>: each fraudulent case is linked to a small group of semantically similar images, enabling the evaluation of reasoning-based detection methods. Specifically, from a collection of 400K business images, we mined 109 cross-sample anomaly cases (396 total samples, averaging 3.63 samples per case) and 109 randomly selected anomaly-free images. In total, the benchmark consists of 505 images spanning 61 distinct document types.        
         </p>
-        <centering>
-          <div style="text-align: center;">
-            <img id="teaser" width="95%" src="assets/intro2.png">     
-          </div>
-        </centering>
-      </p>
-      <p style="font-family:Times New Roman; text-align: left;">
-        The task definition of IITC and ITA tasks. (a) The IITC task takes long interleaved image-text content as input and requires the model to specify the image it refers to in its response. (b) The ITA task takes shuffled images and text segments from different articles as input and requires the model to output the relationship between the text and the images. &ltText *&gt and &ltImage *&gt represent a text segment and an image, respectively. They are both tokenized and fed into the model along with the task prompt and the question.
-      </p>
+        <div style="text-align: center;">
+            <iframe src="assets/AnnotationCase.pdf" width="95%" style="border: none;"></iframe>
+            <p style="font-style: italic; font-size: 14px; color: #555; margin-top: 8px;">
+              Figure: Examples of the Human Annotation Process.
+              Given the LLM's pre-annotated conclusions, human annotators need to determine whether anomalies exist in the actual images and whether the LLM's pre-annotated conclusions align with the ground truth. They then select one of five predefined labels (TP, FP-A, FN, FP-N, TN) to evaluate the LLM's pre-annotated results. If the selected label is FP-A or FN (marked with *), it indicates that the LLM failed to identify the correct anomalous elements, and annotators are required to correct or supplement the anomalous elements along with the associated images. Figures (a), (b), and (c) demonstrate examples of LLM pre-annotated results as TP, FP-A, and FP-N, respectively.
+            </p>
+        </div> 
+
+        <div style="text-align: center;">
+            <iframe src="assets/Main.pdf" width="95%" style="border: none;"></iframe>
+        </div> 
+        <p style="font-family:Times New Roman; text-align: left;">
+            <strong>Framework for CSIAD.</strong> The diagram outlines the key modules: <em>(a) Retrieval Ensemble</em>, <em>(b) Sample-Specific Rule Generation</em>, <em>(c) Fact-Driven Verification</em>, and <em>(d) Rule-Based Anomaly Analysis</em>.
+            To determine whether a document image is fraudulent, a natural workflow is to "consult" relevant images to identify potential anomalies. As illustrated in the framework for CSIAD, <strong>CSIAD</strong> consists of four core modules:
+            <ul style="margin-top: 0;">
+                <li><strong>Retrieval Ensemble:</strong> Given a query image <code>I<sub>q</sub></code>, this module retrieves a batch of relevant images, forming a suspicious set <code>S<sub>q</sub></code>.</li>
+                <li><strong>Sample-Specific Rule Generation:</strong> Generates a set of rules <code>R<sub>init</sub></code> that normal samples are expected to follow.</li>
+                <li><strong>Fact-Driven Verification:</strong> Validates and filters the rules using factual evidence to yield a refined set <code>R<sub>verified</sub></code>.</li>
+                <li><strong>Rule-Based Anomaly Detection:</strong> Uses the verified rules to detect and explain anomalies in <code>S<sub>q</sub></code>.</li>
+            </ul>
+        </p>
       </div>       
     </div>
   </div>
