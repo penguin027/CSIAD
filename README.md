@@ -7,8 +7,8 @@ A novel framework for logical image fraud detection using cross-sample reasoning
 ## 🔗 Quick Links
 
 - 🏠 [**Project Homepage**](https://penguin027.github.io/CSIAD/)
-- 📄 [**Paper (ACL 2025)**](coming soon)
-- 📊 [**Benchmark-CrossCred**](coming soon)
+- 📄 [**Paper (ACL 2025)**](https://aclanthology.org/2025.acl-long.687/)
+- 📊 [**Benchmark-CrossCred**](https://drive.google.com/file/d/1seJd_9_N4GCdn34kRUHi7cFlOgKxcdU-/view?usp=sharing)
 <!-- - 🎥 [**Demo Video**](coming soon) -->
 
 ---
@@ -24,7 +24,7 @@ A novel framework for logical image fraud detection using cross-sample reasoning
 ## 📰 News
 
 <!-- - 📊 **2025-05-25**: Released **CrossCred** dataset: 505 real-world document images with fine-grained annotations. -->
-- 🚧 The CrossCred benchmark is under de-identification and will be released soon.
+- ✅ **2025-10-26**: The CrossCred benchmark is released.
 - 🌐 **2025-05-25**: Project homepage launched.
 - 🎉 **2025-05-15**: CSIAD accepted at **ACL 2025**! 
 
